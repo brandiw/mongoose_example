@@ -2,7 +2,6 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var ejsLayout = require("express-ejs-layouts");
-var User = require("./models/user");
 var app = express();
 
 //Use and Set statements

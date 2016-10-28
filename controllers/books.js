@@ -1,6 +1,5 @@
 var express = require("express");
 var router = express.Router();
-var Book = require("../models/book");
 
 //Remember - all these routes are relative to /books already!
 //Show all books
