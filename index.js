@@ -2,11 +2,13 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var mongoose = require("mongoose");
+var ejsLayout = require("express-ejs-layouts");
 var User = require("./models/user");
 var app = express();
 
 //Use and Set statements
 app.set("view engine", "ejs");
+app.use(ejsLayout);
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static('public'));
 
