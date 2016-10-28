@@ -6,20 +6,10 @@ var Book = require("../models/book");
 //Show all books
 router.get("/", function(req, res){
   //Find all the users
-  Book.find({}, function(err, books) {
-    if (err) {
-      return res.send(err);
-    }
-    res.send(books);
-  });
 });
 
 router.get("/author", function(req, res){
-  Book.find()
-  .populate('author')
-  .exec(function(err, books) {
-    res.send(books);
-  });
+  //Find books plus authors
 });
 
 module.exports = router;
