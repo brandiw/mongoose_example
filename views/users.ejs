@@ -1,7 +1,16 @@
 <h1>User list</h1>
 
 <div>
-  <!-- Your code here -->
+  <% users.forEach(function(u){ %>
+    name: <%= u.name %>,
+    email: <%= u.email %>,
+    age: <%= u.age %>,
+    website: <%= u.website %>
+    <a href="/users/edit/<%= u._id %>" class="btn-sm btn-warning">Edit This User</a>
+    <a href="/users/<%= u._id %>" class="delete-link btn-sm btn-danger">Delete User</a>
+    <hr>
+  <% }); %>
+  <hr>
 
   <a href="/" class="btn-sm btn-success">Home</a>
 </div>

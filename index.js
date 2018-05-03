@@ -2,6 +2,7 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var ejsLayout = require("express-ejs-layouts");
+var mongoose = require("mongoose");
 var app = express();
 
 //Use and Set statements
@@ -11,7 +12,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(express.static('public'));
 
 //Connect mongoose:
-//What here?
+//Be careful here - anything you put as your DB name will be created!
+mongoose.connect("mongodb://localhost/library");
 
 //Routes
 app.get("/", function(req, res){
